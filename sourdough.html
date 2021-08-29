@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sourdough Bread</title>
+    <style>
+      .entire {
+        background: #f8f4e1;
+        margin: 20px auto;
+        padding: 50px;
+        border: 1px;
+        border-radius: 50px;
+        width: 50%;
+      }
+      h1 {
+        margin: 0;
+        text-align: center;
+        color: #4e3620;
+        font-size: 60px;
+        font-family: cursive;
+      }
+      h2 {
+        margin: 0px;
+        margin: 2px auto 14px;
+        text-align: center;
+        color: #4e3620;
+        font-size: 22px;
+        font-family: fantasy;
+        font-weight: normal;
+      }
+
+      .paragraph {
+        font-family: monospace;
+        font-size: 22px;
+      }
+      img {
+        width: 450px;
+        display: block;
+        margin: auto;
+      }
+
+      p {
+        font-size: 20px;
+        color: #897853;
+        font-family: fantasy;
+        margin-bottom: 5px;
+        line-height: 38px;
+      }
+
+      .link {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .starter {
+        text-decoration: none;
+        color: #897853;
+      }
+
+      .starter:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .more_info {
+        color: #897853;
+        font-size: 11px;
+        font-family: fantasy;
+      }
+
+      button {
+        display: block;
+        margin: auto;
+        font-size: 28px;
+        color: #897853;
+        background-color: #c8eed9;
+        border: none;
+        border-radius: 8px;
+        padding: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        transition: all 200ms ease;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: linear-gradient(
+          87.4deg,
+          rgb(78, 54, 32) 1.9%,
+          rgb(137, 120, 83) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+        color: #c8eed9;
+        border: 1px solid #897853;
+      }
+
+      .signature{
+        color: #897853;
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="entire">
+      <h1>Sourdough Bread</h1>
+      <h2>The Art of Fermentation: Fungi to Food</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/013/277/original/Artisanal_Sourdough_Bread___The_Old_Mill___Pigeon_Forge__TN.jpeg?1626639912"
+        alt="Sourdough Bread"
+      />
+      <hr />
+      <p>
+        <span class="paragraph"
+          ><strong><em> Sourdough </em></strong></span
+        >
+        is slow-fermented bread. It is unique because it does not require
+        commercial yeast in order to rise. Instead, it’s made with a live
+        fermented culture called
+        <span class="paragraph">
+          <strong
+            ><em>
+              <a
+                href="https://www.theclevercarrot.com/2019/03/beginner-sourdough-starter-recipe/"
+                target="blank"
+                class="starter"
+              >
+                a sourdough starter
+              </a></em
+            ></strong
+          >
+        </span>
+        which acts as a natural leavening agent. Sourdough is known for its
+        characteristic tangy flavor, chewy texture and crisp, crackly crust.
+        From a health standpoint, it dominates when compared to supermarket
+        loaves. The naturally occurring acids and long fermentation help to
+        break down the gluten, making it more digestible and easy for the body
+        to absorb. It's delcious flavor is just a cherry on top!
+      </p>
+      <div class="link">
+        <a
+          href="https://www.theclevercarrot.com/2014/01/sourdough-bread-a-beginners-guide/"
+          target="blank"
+          class="more_info"
+          >Read more about artisan sourdough</a
+        >
+      </div>
+      <br />
+      <br />
+      <button>Try this simple recipe!</button>
+      
+      <div class = "signature"> Coded by Tanimola Somolu</div>
+    </div>
+    
+
+    <script>
+      function changeButton() {
+        let level = prompt("Is this your first sourdough bread?");
+        level = level.toLowerCase();
+        let recipeButton = document.querySelector("button");
+        if (level === "yes") {
+          recipeButton.innerHTML = "Make your sourdough starter first!";
+        } else {
+          recipeButton.innerHTML = "Try this dark rye recipe instead!";
+        }
+        alert("Happy Baking! 👩🏿‍🍳🥯🥖");
+      }
+      let recButton = document.querySelector("button");
+      recButton.addEventListener("click", changeButton);
+    </script>
+  </body>
+</html>
